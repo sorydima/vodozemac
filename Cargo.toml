@@ -85,3 +85,10 @@ olm-rs = { git = "https://github.com/poljar/olm-rs" }
 [[bench]]
 name = "olm_benchmark"
 harness = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies.getrandom]
+version = "0.2.16"
+features = ["js"]
